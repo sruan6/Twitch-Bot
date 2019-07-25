@@ -1,10 +1,14 @@
 const TwitchJs = require('twitch-js').default;
-const { TWITCH_TOKEN, TWITCH_USERNAME } = require('./auth.json');
+const {
+  TWITCH_TOKEN,
+  TWITCH_USERNAME,
+  TWITCH_CHANNEL,
+} = require('./auth.json');
 
 const token = TWITCH_TOKEN;
 const username = TWITCH_USERNAME;
 
-const channel = 'sruan6';
+const channel = TWITCH_CHANNEL;
 
 // Instantiate clients.
 const { api, chat, chatConstants } = new TwitchJs({ token, username });
@@ -28,4 +32,5 @@ chat.on(chatConstants.EVENTS.ALL, log);
 chat.connect().then(() => {
   // ... and then join the channel.
   chat.join(channel);
+  chat.say(channel, "I'm connected");
 });
