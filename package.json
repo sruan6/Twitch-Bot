@@ -1,0 +1,25 @@
+{
+  "name": "Twitch-Bot",
+  "version": "1.0.0",
+  "description": "Twitch-Bot V 1.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "bot": "nodemon bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruan060606/Twitch-Bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruan060606/Twitch-Bot/issues"
+  },
+  "homepage": "https://github.com/ruan060606/Twitch-Bot#readme",
+  "dependencies": {
+    "nodemon": "^1.19.1",
+    "twitch-js": "^2.0.0-beta.3"
+  }
+}
